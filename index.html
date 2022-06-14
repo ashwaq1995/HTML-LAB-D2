@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="jumbotron">
+      <div class="container text-center">
+        <h1>Online Flower Store</h1>
+        <p>Gifts, clolorful & creative</p>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#myNavbar"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="about.html">About us</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Deals</a></li>
+            <li><a href="#">Stores</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-collapse">
+            <li>
+              <a href="#"
+                ><span class="glyphicon glyphicon-user"></span> Your Account</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="panel panel-primary">
+            <div class="panel-heading">Mothers day offer</div>
+            <div class="panel-body">
+              <img
+                src="images/f1.jfif"
+                class="img-responsive"
+                style="width: 100%"
+                alt="Image"
+              />
+              <p>Select your color:</p>
+              <div>
+                <input type="radio" name="color" value="pink" id="pink" />
+                <label for="pink">pink</label>
+              </div>
+              <div>
+                <input type="radio" name="color" value="purple" id="purple" />
+                <label for="purple">purple</label>
+              </div>
+              <div>
+                <input type="radio" name="color" value="red" id="red" />
+                <label for="red">red</label>
+              </div>
+              <p>
+                <button id="btn">Show Selected Value</button>
+              </p>
+
+              <p id="output"></p>
+
+              <script>
+                const btn = document.querySelector("#btn");
+                const radioButtons =
+                  document.querySelectorAll('input[name="color"]');
+                btn.addEventListener("click", () => {
+                  let selectedcolor;
+                  for (const radioButton of radioButtons) {
+                    if (radioButton.checked) {
+                      selectedcolor = radioButton.value;
+                      break;
+                    }
+                  }
+                  // show the output:
+                  output.innerText = selectedcolor
+                    ? `You selected ${selectedcolor}`
+                    : `You haven't selected any color`;
+                });
+              </script>
+            </div>
+            <div class="panel-footer">70SAR</div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="panel panel-danger">
+            <div class="panel-heading">Mothers day offer</div>
+            <div class="panel-body">
+              <img
+                src="images/f2.jfif"
+                class="img-responsive"
+                style="width: 100%"
+                alt="Image"
+              />
+              <p>Select your color:</p>
+              <div>
+                <input type="radio" name="color" value="pink" id="pink" />
+                <label for="pink">pink</label>
+              </div>
+              <div>
+                <input type="radio" name="color" value="purple" id="purple" />
+                <label for="purple">purple</label>
+              </div>
+              <div>
+                <input type="radio" name="color" value="red" id="red" />
+                <label for="red">red</label>
+              </div>
+              <p>
+                <button id="btn">Show Selected Value</button>
+              </p>
+            </div>
+            <div class="panel-footer">80SAR</div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="panel panel-success">
+            <div class="panel-heading">Mothers day offer</div>
+            <div class="panel-body">
+              <img
+                src="images/f3.jfif"
+                class="img-responsive"
+                style="width: 100%"
+                alt="Image"
+              />
+              <details>
+                <summary>description</summary>
+                <p>text text text text text text text text text text.</p>
+              </details>
+            </div>
+            <div class="panel-footer">90SAR</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="panel panel-primary">
+            <div class="panel-heading">Mothers day offer</div>
+            <div class="panel-body">
+              <img
+                src="images/f4.jfif"
+                class="img-responsive"
+                style="width: 100%"
+                alt="Image"
+              />
+            </div>
+            <div class="panel-footer">85SAR</div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="panel panel-primary">
+            <div class="panel-heading">Mothers day offer</div>
+            <div class="panel-body">
+              <img
+                src="images/f5.jfif"
+                class="img-responsive"
+                style="width: 100%"
+                alt="Image"
+              />
+            </div>
+            <div class="panel-footer">100SAR</div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="panel panel-primary">
+            <div class="panel-heading">Mothers day offer</div>
+            <div class="panel-body">
+              <img
+                src="images/f6.jfif"
+                class="img-responsive"
+                style="width: 100%"
+                alt="Image"
+              />
+            </div>
+            <div class="panel-footer">90SAR</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+      <blockquote class="block4">
+        <div class="name">
+          Sara
+        </div>
+        
+        <div class="quote">
+          I like the online Store
+          text text text text text text
+          text text text text text text
+          text text text text text text
+        </div>
+      </blockquote>
+    </div>
+  </div>
+</div>
+
+<div class="col-xs-12 col-sm-8 col-sm-offset-2">
+  <blockquote class="block4">
+    <div class="name">
+      Layla
+    </div>
+    
+    <div class="quote">
+      nice flowers.
+      text text text text text text
+      text text text text text text
+      text text text text text text
+      text text text text text text
+    </div>
+  </blockquote>
+</div>
+</div>
+</div>
+
+
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th>Flowers names</th>
+          <th>information</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Balsam</td>
+          <td>Bring the tropics to your garden with a Balsam plant.</td>
+        </tr>
+        <tr class="active-row">
+          <td>Basket of Gold</td>
+          <td>
+            With bright yellow, low-growing flowers, no wonder where the Basket
+            of Gold got its name.
+          </td>
+        </tr>
+        <tr>
+          <td>Bleeding Heart</td>
+          <td>
+            The Bleeding Heart's appearance is as equally dramatic as its name,
+            bearing heart shaped flowers that hang from a long stem.
+          </td>
+        </tr>
+        <!-- and so on... -->
+      </tbody>
+    </table>
+
+    <body style="position:absolute">
+
+    <br /><br />
+
+    <footer class="container-fluid text-center">
+      <form class="form-inline">
+        Receive offers:
+        <input
+          type="email"
+          class="form-control"
+          color="50"
+          placeholder="Email Address"
+        />
+        <button type="button" class="btn btn-danger">Sign Up</button>
+      </form>
+    </footer>
+  </body>
+</html>
